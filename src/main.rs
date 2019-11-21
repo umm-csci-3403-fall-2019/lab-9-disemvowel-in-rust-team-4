@@ -1,6 +1,6 @@
 fn main() {
     println!("Hello, world!");
-    let s = String::from("Hello, world");
+    let s = String::from("̆aa̤");
     let s_disemvowel = disemvowel(&s);
 
     println!("s was '{}', and without vowels is '{}'.", s, s_disemvowel);
@@ -23,7 +23,7 @@ fn disemvowel(inp_string:&str) -> String {
 
 // Everything from here down is Rust test code. You shouldn't need to 
 // change any of this. 
-
+//
 // Use `cargo test` to run all these tests. All the tests will initially 
 // fail because there's no definition for the `disemvowel` function. Add
 // that up above and work to get the tests to pass. See the lab write-up
