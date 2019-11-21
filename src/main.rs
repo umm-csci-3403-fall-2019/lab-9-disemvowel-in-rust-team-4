@@ -6,9 +6,24 @@ fn main() {
     println!("s was '{}', and without vowels is '{}'.", s, s_disemvowel);
 }
 
+fn disemvowel(inp_string:&str) -> String {
+    let vowels = String::from("AEIOUaeiou");
+    let mut chars = inp_string.chars().peekable();
+    let mut new_string = String::new();
+
+
+    while let Some(c) =  chars.next() {
+        if !vowels.contains(c){
+            new_string.push(c);
+        }
+    }
+    new_string
+}
+
+
 // Everything from here down is Rust test code. You shouldn't need to 
 // change any of this. 
-//
+
 // Use `cargo test` to run all these tests. All the tests will initially 
 // fail because there's no definition for the `disemvowel` function. Add
 // that up above and work to get the tests to pass. See the lab write-up
